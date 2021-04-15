@@ -1,0 +1,52 @@
+package prOpcKit;
+
+{$R *.res}
+{$R 'prOpcKit.dcr'}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'prOpcKit Package'}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  designide,
+  vclactnband,
+  vclx;
+
+contains
+  prOpcBrowser in 'prOpcBrowser.pas',
+  prOpcClient in 'prOpcClient.pas',
+  prOpcComn in 'prOpcComn.pas',
+  prOpcDa in 'prOpcDa.pas',
+  prOpcEnum in 'prOpcEnum.pas',
+  prOpcError in 'prOpcError.pas',
+  prOpcTypes in 'prOpcTypes.pas',
+  prOpcUtils in 'prOpcUtils.pas',
+  prOpcKitDsgn in 'prOpcKitDsgn.pas',
+  prOpcServerSelect in 'prOpcServerSelect.pas' {ServerSelectDlg},
+  prOpcWizMain in 'prOpcWizMain.pas' {OpcServerForm};
+
+end.
